@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const slides = [
   {
@@ -21,6 +21,14 @@ const slides = [
 
 function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Auto slide every 4 seconds
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <div className="relative h-[600px] overflow-hidden">

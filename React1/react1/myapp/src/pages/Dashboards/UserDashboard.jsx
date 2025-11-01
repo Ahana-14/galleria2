@@ -6,11 +6,8 @@ import {
   FaHeart, 
   FaUser, 
   FaChartLine, 
-  FaBox, 
   FaDollarSign,
-  FaEye,
   FaStar,
-  FaHistory,
   FaCog,
   FaBell
 } from 'react-icons/fa';
@@ -73,6 +70,30 @@ const UserDashboard = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-6">
+          {/* Sidebar */}
+          <aside className="bg-white rounded-2xl shadow-md border p-4 h-max">
+            <nav className="space-y-1">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`w-full text-left flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+                      activeTab === tab.id
+                        ? 'bg-indigo-50 text-indigo-700'
+                        : 'hover:bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {tab.name}
+                  </button>
+                );
+              })}
+            </nav>
+          </aside>
+          <div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +101,13 @@ const UserDashboard = () => {
         >
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div className="bg-white rounded-xl shadow-md p-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300"
+            >
               <div className="flex items-center">
                 <div className="p-3 bg-blue-100 rounded-lg">
                   <FaShoppingCart className="w-6 h-6 text-blue-600" />
@@ -90,9 +117,15 @@ const UserDashboard = () => {
                   <p className="text-2xl font-bold text-gray-900">{stats.totalOrders}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl shadow-md p-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300"
+            >
               <div className="flex items-center">
                 <div className="p-3 bg-green-100 rounded-lg">
                   <FaDollarSign className="w-6 h-6 text-green-600" />
@@ -102,9 +135,15 @@ const UserDashboard = () => {
                   <p className="text-2xl font-bold text-gray-900">₹{(stats.totalSpent / 1000).toFixed(0)}K</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl shadow-md p-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300"
+            >
               <div className="flex items-center">
                 <div className="p-3 bg-red-100 rounded-lg">
                   <FaHeart className="w-6 h-6 text-red-600" />
@@ -114,9 +153,15 @@ const UserDashboard = () => {
                   <p className="text-2xl font-bold text-gray-900">{stats.wishlistItems}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white rounded-xl shadow-md p-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300"
+            >
               <div className="flex items-center">
                 <div className="p-3 bg-yellow-100 rounded-lg">
                   <FaStar className="w-6 h-6 text-yellow-600" />
@@ -126,7 +171,7 @@ const UserDashboard = () => {
                   <p className="text-2xl font-bold text-gray-900">{stats.reviewsWritten}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Tabs */}
@@ -218,11 +263,24 @@ const UserDashboard = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Order History</h3>
                   <div className="space-y-4">
-                    {recentOrders.map((order) => (
-                      <div key={order.id} className="border border-gray-200 rounded-lg p-6">
+                    {recentOrders.map((order, index) => (
+                      <motion.div
+                        key={order.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ scale: 1.02 }}
+                        className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all duration-300"
+                      >
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex items-center">
-                            <img src={order.image} alt={order.product} className="w-16 h-16 rounded-lg object-cover mr-4" />
+                            <motion.img
+                              src={order.image}
+                              alt={order.product}
+                              className="w-16 h-16 rounded-lg object-cover mr-4"
+                              whileHover={{ scale: 1.1 }}
+                              transition={{ duration: 0.2 }}
+                            />
                             <div>
                               <h4 className="font-medium text-gray-900">{order.product}</h4>
                               <p className="text-sm text-gray-600">by {order.artist}</p>
@@ -235,23 +293,34 @@ const UserDashboard = () => {
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className={`px-3 py-1 text-sm rounded-full ${
-                            order.status === 'Delivered' ? 'bg-green-100 text-green-800' :
-                            order.status === 'Shipped' ? 'bg-blue-100 text-blue-800' :
-                            'bg-yellow-100 text-yellow-800'
-                          }`}>
+                          <motion.span
+                            className={`px-3 py-1 text-sm rounded-full ${
+                              order.status === 'Delivered' ? 'bg-green-100 text-green-800' :
+                              order.status === 'Shipped' ? 'bg-blue-100 text-blue-800' :
+                              'bg-yellow-100 text-yellow-800'
+                            }`}
+                            whileHover={{ scale: 1.05 }}
+                          >
                             {order.status}
-                          </span>
+                          </motion.span>
                           <div className="flex space-x-2">
-                            <button className="px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors"
+                            >
                               Track Order
-                            </button>
-                            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                            </motion.button>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                            >
                               Write Review
-                            </button>
+                            </motion.button>
                           </div>
                         </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -325,11 +394,11 @@ const UserDashboard = () => {
             </div>
           </div>
         </motion.div>
+        </div>
       </div>
+    </div>
     </div>
   );
 };
 
 export default UserDashboard;
-
-

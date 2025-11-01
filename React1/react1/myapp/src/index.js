@@ -5,15 +5,18 @@ import App from "./App";
 import "./index.css";
 import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
+import { SettingsProvider } from "./context/SettingsContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CartProvider>
-      <WishlistProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </WishlistProvider>
-    </CartProvider>
+    <SettingsProvider>
+      <CartProvider>
+        <WishlistProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </WishlistProvider>
+      </CartProvider>
+    </SettingsProvider>
   </React.StrictMode>
 );

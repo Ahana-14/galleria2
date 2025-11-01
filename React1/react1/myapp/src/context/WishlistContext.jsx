@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const WishlistContext = createContext(null);
 

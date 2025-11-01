@@ -1,5 +1,5 @@
 import React from 'react';
-import CatalogProductCard from '../components/CatalogProductCard';
+import ProductCard from '../components/ProductCard';
 import { products, categories } from '../data/products';
 
 const ProductCatalog = () => {
@@ -26,7 +26,7 @@ const ProductCatalog = () => {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                   {categoryProducts.map((product) => (
-                    <CatalogProductCard key={product.id} product={product} />
+                    <ProductCard key={product.id} product={product} />
                   ))}
                 </div>
               </section>

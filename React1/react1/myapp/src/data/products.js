@@ -1,32 +1,62 @@
+// src/data/products.js
+
 export const products = [
   // Paintings
   {
     id: 1,
     name: "Sunset Canvas",
     price: 89.99,
+    originalPrice: 119.99,
+    discount: 25,
     category: "Paintings",
-    image: "https://images.fineartamerica.com/images/artworkimages/medium/3/beauty-of-sunset-acrylic-on-canvas-painting-painting-art-artist-artistic-artwork-background-bay-beach-beautiful-blue-bright-canvas-clouds-coast-color-dark-dawning-drawing-fine-arts-foam-horizon-n-akkash.jpg"
+    image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=400&fit=crop&crop=center",
+    title: "Sunset Canvas",
+    artist: "Nature Artist",
+    stock: 5,
+    isNew: true,
+    tags: ["Nature", "Sunset", "Canvas"]
   },
   {
     id: 2,
     name: "Abstract Colors",
     price: 75.50,
+    originalPrice: 95.50,
+    discount: 21,
     category: "Paintings",
-    image: "https://t3.ftcdn.net/jpg/07/15/94/10/360_F_715941070_1oMSzddmbvl7nq10QP8HHGsi0S7EAZB0.jpgtps://picsum.photos/400/400?random=2"
+    image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=400&fit=crop&crop=center",
+    title: "Abstract Colors",
+    artist: "Modern Artist",
+    stock: 8,
+    isNew: false,
+    tags: ["Abstract", "Modern", "Colorful"]
   },
   {
     id: 3,
     name: "Landscape Art",
     price: 120.00,
+    originalPrice: 150.00,
+    discount: 20,
     category: "Paintings",
-    image: "https://picsum.phhttps://rosshillart.com/cdn/shop/articles/R._Delino_Landscape_art_-_Rosshillart.com.jpg?v=1703181542otos/400/400?random=3"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Landscape Art",
+    artist: "Landscape Master",
+    stock: 3,
+    isNew: true,
+    tags: ["Landscape", "Nature", "Oil"]
   },
   {
     id: 4,
     name: "Modern Portrait",
     price: 95.75,
+    originalPrice: 125.75,
+    discount: 24,
     category: "Paintings",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO08Qo1VssBVewlrcf2T3KRwZNKKxuf6hv4Q&s://picsum.photos/400/400?random=4"
+    image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=400&fit=crop&crop=center",
+    title: "Modern Portrait",
+    artist: "Portrait Artist",
+    stock: 6,
+    isNew: false,
+    tags: ["Portrait", "Modern", "Human"]
   },
 
   // Sculptures
@@ -35,28 +65,48 @@ export const products = [
     name: "Marble Buddha",
     price: 250.00,
     category: "Sculptures",
-    image: "hhttps://handicraftbazaar.in/cdn/shop/products/BhudhaWhiteLifestyle2_1200x1200.jpg?v=1674812172ttps://picsum.photos/400/400?random=5"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Marble Buddha",
+    artist: "Sculpture Master",
+    stock: 2,
+    isNew: true,
+    tags: ["Marble", "Buddha", "Spiritual"]
   },
   {
     id: 6,
     name: "Wooden Horse",
     price: 180.25,
     category: "Sculptures",
-    image: "https://picsum.photos/40https://www.cottageartsindia.com/cdn/shop/files/0421_1800x1800.jpg?v=17175886990/400?random=6"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Wooden Horse",
+    artist: "Wood Carver",
+    stock: 4,
+    isNew: false,
+    tags: ["Wood", "Animal", "Handmade"]
   },
   {
     id: 7,
     name: "Stone Warrior",
     price: 320.50,
     category: "Sculptures",
-    image: "httphttps://dl2.myminifactory.com/object-assets/60b55932ead58/images/720X720-stone-warrior02.jpgs://picsum.photos/400/400?random=7"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Stone Warrior",
+    artist: "Stone Artist",
+    stock: 1,
+    isNew: true,
+    tags: ["Stone", "Warrior", "Ancient"]
   },
   {
     id: 8,
     name: "Bronze Lion",
     price: 275.00,
     category: "Sculptures",
-    image: "https://picsum.photos/400/https://5.imimg.com/data5/ANDROID/Default/2021/3/TP/PD/HU/87349675/768d50896dfa4fb3c110f8478a28605b-jpg-500x500.jpg?random=8"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Bronze Lion",
+    artist: "Bronze Master",
+    stock: 3,
+    isNew: false,
+    tags: ["Bronze", "Lion", "Royal"]
   },
 
   // Handicrafts
@@ -65,28 +115,48 @@ export const products = [
     name: "Handwoven Basket",
     price: 45.99,
     category: "Handicrafts",
-    image: "https://picsum.photos/400/https://i.etsystatic.com/10281997/r/il/798b6c/1459975280/il_570xN.1459975280_42ub.jpg400?random=9"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Handwoven Basket",
+    artist: "Weaving Artist",
+    stock: 10,
+    isNew: true,
+    tags: ["Basket", "Handwoven", "Natural"]
   },
   {
     id: 10,
     name: "Bamboo Lamp",
     price: 65.50,
     category: "Handicrafts",
-    image: "https://picshttps://5.imimg.com/data5/WX/OB/BC/SELLER-63096869/slide12-500x500.JPGum.photos/400/400?random=10"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Bamboo Lamp",
+    artist: "Bamboo Craftsman",
+    stock: 7,
+    isNew: false,
+    tags: ["Bamboo", "Lamp", "Eco-friendly"]
   },
   {
     id: 11,
     name: "Jute Wall Hanging",
     price: 35.75,
     category: "Handicrafts",
-    image: "https://pichttps://artistrybazaarinc.s3.us-west-1.amazonaws.com/Noida/KAPS-NOIDA-026/1.JPGsum.photos/400/400?random=11"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Jute Wall Hanging",
+    artist: "Jute Artist",
+    stock: 12,
+    isNew: true,
+    tags: ["Jute", "Wall Art", "Decorative"]
   },
   {
     id: 12,
     name: "Crochet Bag",
     price: 28.00,
     category: "Handicrafts",
-    image: "https://pihttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVTUyXae8JmgDC7DMaGxrz-6IewmcwJQW_qw&scsum.photos/400/400?random=12"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Crochet Bag",
+    artist: "Crochet Master",
+    stock: 15,
+    isNew: false,
+    tags: ["Crochet", "Bag", "Fashion"]
   },
 
   // Pottery
@@ -95,28 +165,48 @@ export const products = [
     name: "Clay Vase",
     price: 55.25,
     category: "Pottery",
-    image: "https://picsum.phhttps://cdn.shopify.com/s/files/1/0573/9714/9786/files/17374_25_05_INIP_14.jpg?v=1748979130otos/400/400?random=13"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Clay Vase",
+    artist: "Pottery Artist",
+    stock: 8,
+    isNew: true,
+    tags: ["Clay", "Vase", "Ceramic"]
   },
   {
     id: 14,
     name: "Blue Ceramic Bowl",
     price: 42.50,
     category: "Pottery",
-    image: "https://picsum.https://cdn.igp.com/f_auto,q_auto,t_pnopt19prodlp/products/p-moroccan-blue-ceramic-soup-bowls-set-of-2-170474-1.jpgphotos/400/400?random=14"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Blue Ceramic Bowl",
+    artist: "Ceramic Master",
+    stock: 6,
+    isNew: false,
+    tags: ["Ceramic", "Bowl", "Blue"]
   },
   {
     id: 15,
     name: "Terracotta Plate",
     price: 38.99,
     category: "Pottery",
-    image: "https://picsum.photos/400/https://urviscreations.com/wp-content/uploads/2024/04/17b8e4e8-7511-4617-b558-6e16e6cf4c92.jpeg400?random=15"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Terracotta Plate",
+    artist: "Terracotta Artist",
+    stock: 9,
+    isNew: true,
+    tags: ["Terracotta", "Plate", "Traditional"]
   },
   {
     id: 16,
     name: "Painted Mug",
     price: 25.75,
     category: "Pottery",
-    image: "https://picsum.photos/400/4https://www.zwende.com/cdn/shop/files/HES_Wide_mouth_mug_Vanshika_1_1800x1800.jpg?v=174826834000?random=16"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Painted Mug",
+    artist: "Mug Artist",
+    stock: 20,
+    isNew: false,
+    tags: ["Mug", "Painted", "Daily Use"]
   },
 
   // Jewelry
@@ -125,29 +215,37 @@ export const products = [
     name: "Beaded Necklace",
     price: 85.00,
     category: "Jewelry",
-    image: "https://picsum.photos/40https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5drFfckblFsXJMoUC7ABe24k__8BGtYxNQQ&s0/400?random=17"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Beaded Necklace",
+    artist: "Jewelry Designer",
+    stock: 5,
+    isNew: true,
+    tags: ["Necklace", "Beads", "Fashion"]
   },
   {
     id: 18,
     name: "Silver Earrings",
     price: 125.50,
     category: "Jewelry",
-    image: "https://picsum.phhttps://preyasi.in/cdn/shop/files/matasya-ghungroo-dangle-earrings.jpg?v=1744100824otos/400/400?random=18"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Silver Earrings",
+    artist: "Silver Smith",
+    stock: 3,
+    isNew: false,
+    tags: ["Silver", "Earrings", "Elegant"]
   },
-  
   {
     id: 19,
     name: "Handmade Ring",
     price: 75.99,
     category: "Jewelry",
-    image: "https://picsumhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLKDdRwqzMlbelVkHsQF6MYFvriCZImff7UBKsbnaM0pyFuOvGqPeHyAr6zRFexB2iG5w&usqp=CAU.photos/400/400?random=20"
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    title: "Handmade Ring",
+    artist: "Ring Maker",
+    stock: 7,
+    isNew: true,
+    tags: ["Ring", "Handmade", "Unique"]
   }
 ];
 
-export const categories = [
-  "Paintings",
-  "Sculptures", 
-  "Handicrafts",
-  "Pottery",
-  "Jewelry"
-];
+export const categories = ["Paintings", "Sculptures", "Handicrafts", "Pottery", "Jewelry"];
